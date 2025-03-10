@@ -13,3 +13,10 @@ df.write.mode("overwrite").json("results")
 - run: spark-submit --version
 - run: spark-submit --master local hello.py
 - run: ls -la  
+
+ runs-on: ubuntu-latest
+
+permissions:
+# Give the default GITHUB_TOKEN write permission to commit and push the
+# added or changed files to the repository.
+contents: write
